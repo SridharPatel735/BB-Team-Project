@@ -135,7 +135,6 @@
             this.instructionsLabel.Size = new System.Drawing.Size(502, 307);
             this.instructionsLabel.TabIndex = 13;
             this.instructionsLabel.Text = resources.GetString("instructionsLabel.Text");
-            this.instructionsLabel.Click += new System.EventHandler(this.instructionsLabel_Click);
             // 
             // pictureBox7
             // 

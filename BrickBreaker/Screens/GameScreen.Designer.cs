@@ -50,9 +50,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.gameBottomBar = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.gameBottomBar)).BeginInit();
             this.SuspendLayout();
             // 
             // gameTimer
@@ -237,25 +234,6 @@
             this.label19.Size = new System.Drawing.Size(48, 27);
             this.label19.TabIndex = 18;
             // 
-            // label20
-            // 
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Image = global::BrickBreaker.Properties.Resources.greenBrick;
-            this.label20.Location = new System.Drawing.Point(-7, 10);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(48, 27);
-            this.label20.TabIndex = 19;
-            // 
-            // gameBottomBar
-            // 
-            this.gameBottomBar.BackgroundImage = global::BrickBreaker.Properties.Resources.gameBottomBar;
-            this.gameBottomBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.gameBottomBar.Location = new System.Drawing.Point(0, 500);
-            this.gameBottomBar.Name = "gameBottomBar";
-            this.gameBottomBar.Size = new System.Drawing.Size(850, 50);
-            this.gameBottomBar.TabIndex = 20;
-            this.gameBottomBar.TabStop = false;
-            // 
             // GameScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -263,7 +241,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::BrickBreaker.Properties.Resources.Level_1_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
@@ -283,7 +260,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.gameBottomBar);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GameScreen";
@@ -291,7 +267,6 @@
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.GameScreen_Paint);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.GameScreen_KeyUp);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.GameScreen_PreviewKeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.gameBottomBar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -321,7 +296,5 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.PictureBox gameBottomBar;
     }
 }

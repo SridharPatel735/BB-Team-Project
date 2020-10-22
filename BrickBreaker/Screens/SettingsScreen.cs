@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
+using System.Media;
 using WMPLib;
 
 namespace BrickBreaker
@@ -27,6 +28,9 @@ namespace BrickBreaker
 
         //rectangle for player ball
         Rectangle playerRec;
+
+        //soundplayer for menu sound
+        SoundPlayer menuSound = new SoundPlayer(Properties.Resources.menuSound);
 
         //images for button sprites and title
         Image muteButtonSprite, fullscreenButtonSprite, exitSettingsButtonSprite, playerSprite;
@@ -133,6 +137,8 @@ namespace BrickBreaker
                     { 
                         wmp.settings.volume = 100;
 
+                        menuSound.Play();
+
                         mute = false;
                     }
                     if (mute == false)
@@ -146,6 +152,8 @@ namespace BrickBreaker
                 {
                     playerRec = new Rectangle(fullscreenRec.X + 20, fullscreenRec.Y + 15, 10, 10);
                     downArrowDown = false;
+
+                    menuSound.Play();
 
                     Thread.Sleep(150);
                 }
@@ -180,12 +188,16 @@ namespace BrickBreaker
                 {
                     playerRec = new Rectangle(muteRec.X + 20, muteRec.Y + 15, 10, 10);
 
+                    menuSound.Play();
+
                     Thread.Sleep(150);
                 }
                 if (downArrowDown == true)
                 {
                     playerRec = new Rectangle(exitRec.X + 20, exitRec.Y + 15, 10, 10);
                     downArrowDown = false;
+
+                    menuSound.Play();
 
                     Thread.Sleep(150);
                 }
@@ -213,6 +225,8 @@ namespace BrickBreaker
                 if (upArrowDown == true)
                 {
                     playerRec = new Rectangle(fullscreenRec.X + 20, fullscreenRec.Y + 15, 10, 10);
+
+                    menuSound.Play();
 
                     Thread.Sleep(150);
                 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Media;
 using System.Windows.Forms;
 
 namespace BrickBreaker
@@ -24,6 +25,9 @@ namespace BrickBreaker
         //booleans for checking which label the user is on
         Boolean char1Selected, char2Selected, char3Selected;
 
+        //soundplayer for menu sound
+        SoundPlayer menuSound = new SoundPlayer(Properties.Resources.menuSound);
+
         //integers corresponding to each label's letter
         int i1 = 0;
         int i2 = 0;
@@ -31,11 +35,6 @@ namespace BrickBreaker
 
         //create a list with for letters A-Z
         List<string> letters = new List<string>() { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "Y", "X", "Z", };
-
-        private void instructionsLabel_Click(object sender, EventArgs e)
-        {
-
-        }
 
         #endregion variable declarations
 
@@ -149,6 +148,8 @@ namespace BrickBreaker
                     char2Selected = true;
                     char3Selected = false;
 
+                    menuSound.Play();
+
                     Thread.Sleep(150);
                     return;
                 }
@@ -190,6 +191,8 @@ namespace BrickBreaker
                     char2Selected = false;
                     char3Selected = false;
 
+                    menuSound.Play();
+
                     Thread.Sleep(150);
                     return;
                 }
@@ -199,6 +202,8 @@ namespace BrickBreaker
                     char1Selected = false;
                     char2Selected = false;
                     char3Selected = true;
+
+                    menuSound.Play();
 
                     Thread.Sleep(150);
                     return;
@@ -240,6 +245,8 @@ namespace BrickBreaker
                     char1Selected = false;
                     char2Selected = true;
                     char3Selected = false;
+
+                    menuSound.Play();
 
                     Thread.Sleep(150);
                     return;
