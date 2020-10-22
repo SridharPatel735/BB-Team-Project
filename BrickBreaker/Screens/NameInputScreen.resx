@@ -118,22 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="instructionsLabel.Text" xml:space="preserve">
-    <value>Use the arrow keys to move left and right.
+    <value>Use the arrow keys to move left and right. Press SPACE to continue.
 
 
-1 HP -                                Freezes paddle - 
+1 HP -                                Slow paddle - 
 
-2 HP -                                Adds balls - 
+2 HP -                                Double balls - 
 
-3 HP -                                Doubles points - 
+3 HP -                                Double points - 
  
 4 HP -                                Shield - 
 
 5 HP -                                Lose points - 
 
-6 HP -       
-                         
-                             Press SPACE to play after making your name.
+6 HP -                                Longer Paddle - 
+
+7 HP - 
 
 </value>
   </data>

@@ -83,6 +83,26 @@ namespace BrickBreaker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Double_Ball_PowerUp {
+            get {
+                object obj = ResourceManager.GetObject("Double_Ball_PowerUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Double_Points_PowerUp {
+            get {
+                object obj = ResourceManager.GetObject("Double_Points_PowerUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exitButtonSprite {
             get {
                 object obj = ResourceManager.GetObject("exitButtonSprite", resourceCulture);
@@ -96,6 +116,26 @@ namespace BrickBreaker.Properties {
         internal static System.Drawing.Bitmap exitSettingsButtonSprite {
             get {
                 object obj = ResourceManager.GetObject("exitSettingsButtonSprite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fire_Anti_PowerUp {
+            get {
+                object obj = ResourceManager.GetObject("Fire_Anti_PowerUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Freeze_Paddle_PowerUp {
+            get {
+                object obj = ResourceManager.GetObject("Freeze_Paddle_PowerUp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -264,6 +304,16 @@ namespace BrickBreaker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Long_Paddle_PowerUp {
+            get {
+                object obj = ResourceManager.GetObject("Long_Paddle_PowerUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap muteButtonSprite {
             get {
                 object obj = ResourceManager.GetObject("muteButtonSprite", resourceCulture);
@@ -344,6 +394,16 @@ namespace BrickBreaker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Shield_PowerUp {
+            get {
+                object obj = ResourceManager.GetObject("Shield_PowerUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shieldSprite {
             get {
                 object obj = ResourceManager.GetObject("shieldSprite", resourceCulture);
@@ -357,6 +417,16 @@ namespace BrickBreaker.Properties {
         internal static System.Drawing.Bitmap titleSprite {
             get {
                 object obj = ResourceManager.GetObject("titleSprite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap whiteBrick {
+            get {
+                object obj = ResourceManager.GetObject("whiteBrick", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

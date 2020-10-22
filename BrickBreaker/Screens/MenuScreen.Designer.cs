@@ -111,7 +111,7 @@
             // 
             // pictureBox6
             // 
-            this.pictureBox6.BackgroundImage = global::BrickBreaker.Properties.Resources.redBrick;
+            this.pictureBox6.BackgroundImage = global::BrickBreaker.Properties.Resources.whiteBrick;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox6.Location = new System.Drawing.Point(753, 222);
             this.pictureBox6.Name = "pictureBox6";

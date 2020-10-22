@@ -2393,7 +2393,44 @@
         rkJggg==
 </value>
   </data>
-  <data name="gameBottomBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\gameBottomBar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Double_Ball_PowerUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\douvle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Double_Points_PowerUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Double Points PowerUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fire_Anti_PowerUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fire Anti PowerUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Freeze_Paddle_PowerUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coldcoldocldoclo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gameBottomBar" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAA1IAAAAyCAYAAABWOurAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAHxSURBVHhe7dexbQMxEERRl3J1XT9Xt+yA4ZhYYgUIIl/wssHk/+e6rhcAAAB1QgoAAGCRkAIA
+        AFgkpAAAABYJKQAAgEUxpO77BgAA4E9qJiEFAAAwkZpJSAEAAEykZhJSAAAAE6mZhBQAAMBEaqZySD3P
+        AwAAsLXUQqmZhBQAAMCQWig1k5ACAAAYUgulZhJSAAAAQ2qh1ExCCgAAYEgtlJqpFVJpBwAA8A2qjZOa
+        SUgBAABHqjZOaiYhBQAAHKnaOKmZhBQAAHCkauOkZhJSAADAkaqNk5rp7SGV/gAAAD4ptUuncYQUAACw
+        vdQuncYRUgAAwPZSu3QaR0gBAADbS+3SaRwhBQAAbC+1S6dxhBQAALC91C6dxhFSAADA9lK7dBpHSAEA
+        ANtL7dJpHCEFAABsL7VLp3GEFAAAsL3ULp3GeXtIAQAAfINq46RmElIAAMCRqo2TmklIAQAAR6o2Tmom
+        IQUAAByp2jipmYQUAABwpGrjpGZqhRQAAMBOUgulZhJSAAAAQ2qh1ExCCgAAYEgtlJpJSAEAAAyphVIz
+        CSkAAIAhtVBqpnJIAQAAnCg1k5ACAACYSM0kpAAAACZSMwkpAACAidRMQgoAAGAiNVMMKQAAAP4npAAA
+        ABYJKQAAgEVCCgAAYJGQAgAAWHK9fgGc4CEBVRv5lAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="Long_Paddle_PowerUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\big stretch pog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Shield_PowerUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Shield PowerUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="whiteBrick" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAZCAYAAABzVH1EAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAABsSURBVFhH7c+xCcAwDERRD6ZxtJ9m0iQOShEISRHbGO4UHXwwcvWaiPQMnRBVpe4GMTPKXiHu
+        TtV/IPFGbggSN8SmIPGH1BKkgawgBdm0ghRk0wqSDoLUNASxYQhynyEs5Ycw9oAwd0H4k34A+JK5mF5a
+        37IAAAAASUVORK5CYII=
+</value>
   </data>
 </root>
