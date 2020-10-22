@@ -78,7 +78,7 @@ namespace BrickBreaker
 
         private void MenuScreen_KeyUp(object sender, KeyEventArgs e)
         {
-            //player button presses
+            //player button releases
             switch (e.KeyCode)
             {
                 case Keys.Up:
@@ -128,14 +128,14 @@ namespace BrickBreaker
                     //stop menu timer
                     menuTimer.Enabled = false;
 
-                    // Goes to the game screen
-                    GameScreen gs = new GameScreen();
+                    // Goes to the name input screen
+                    NameInputScreen nis = new NameInputScreen();
                     Form form = this.FindForm();
 
-                    form.Controls.Add(gs);
+                    form.Controls.Add(nis);
                     form.Controls.Remove(this);
 
-                    gs.Location = new Point((form.Width - gs.Width) / 2, (form.Height - gs.Height) / 2);
+                    nis.Location = new Point((form.Width - nis.Width) / 2, (form.Height - nis.Height) / 2);
                 }
                 if (downArrowDown == true)
                 {

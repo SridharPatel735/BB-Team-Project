@@ -12,7 +12,6 @@ using WMPLib;
 
 namespace BrickBreaker
 {
-    //Test
     public partial class SettingsScreen : UserControl
     {
         #region variable declarations
@@ -52,9 +51,9 @@ namespace BrickBreaker
         public void OnStart()
         {
             //set menu button sizes and positions
-            muteRec = new Rectangle(75, 200, 150, 50);
-            fullscreenRec = new Rectangle(75, 300, 150, 50);
-            exitRec = new Rectangle(75, 400, 150, 50);
+            muteRec = new Rectangle(50, 200, 150, 50);
+            fullscreenRec = new Rectangle(50, 300, 150, 50);
+            exitRec = new Rectangle(50, 400, 150, 50);
 
             //set player location
             playerRec = new Rectangle(muteRec.X + 20, muteRec.Y + 15, 10, 10);
