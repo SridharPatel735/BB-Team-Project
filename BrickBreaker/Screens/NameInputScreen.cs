@@ -258,11 +258,11 @@ namespace BrickBreaker
             if (i1 == 26) { i1 = 0; }
             if (i1 == -1) { i1 = 25; }
 
-            if (i2 == 26) { i1 = 0; }
-            if (i2 == -1) { i1 = 25; }
+            if (i2 == 26) { i2 = 0; }
+            if (i2 == -1) { i2 = 25; }
 
-            if (i3 == 26) { i1 = 0; }
-            if (i3 == -1) { i1 = 25; }
+            if (i3 == 26) { i3 = 0; }
+            if (i3 == -1) { i3 = 25; }
         }
         #endregion letter loop method
     }
