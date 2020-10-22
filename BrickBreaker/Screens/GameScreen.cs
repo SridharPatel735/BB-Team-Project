@@ -40,6 +40,15 @@ namespace BrickBreaker
         SolidBrush ballBrush = new SolidBrush(Color.White);
         SolidBrush blockBrush = new SolidBrush(Color.Red);
 
+        //Paddle Image
+        Image paddleImage = Properties.Resources.sign__1_;
+        Image freezeImage = Properties.Resources.Freeze_PowerUpi;
+        Image shieldImage = Properties.Resources.Shield_PowerUpi;
+        Image doublePointsImage = Properties.Resources.DoublePoints_PowerUpi;
+        Image lengthImage = Properties.Resources.Length_PowerUpi;
+        Image fireImage = Properties.Resources.Fire_PowerUpi;
+        Image mirrorImage = Properties.Resources.Mirror_PowerUpi;
+
 
         // Fonts
         Font drawFont = new Font("Tahoma", 20);
@@ -55,6 +64,14 @@ namespace BrickBreaker
         public int powerUpSize;
         public int powerUpEffect;
 
+        //Powerup sounds
+        SoundPlayer FireUP = new SoundPlayer(Properties.Resources.Fire_PowerUP);
+        SoundPlayer DoubleUP = new SoundPlayer(Properties.Resources.DoublePoints_PowerUP);
+        SoundPlayer ShieldUP = new SoundPlayer(Properties.Resources.Shield_PowerUP);
+        SoundPlayer LengthUP = new SoundPlayer(Properties.Resources.Length_PowerUP);
+        SoundPlayer FreezeUP = new SoundPlayer(Properties.Resources.Ice_PowerUP);
+        SoundPlayer MirrorUP = new SoundPlayer(Properties.Resources.Mirror_PowerUP);
+
         //int boostSize, boostDraw, boostSpeed;
         List<powerUP> powerUpList = new List<powerUP>();
 
@@ -68,7 +85,6 @@ namespace BrickBreaker
         //List that will build highscores using a class to then commit them to a XML file
         List<Score> highScoreList = new List<Score>();
         int numericScore;
-
 
         public GameScreen()
         {
@@ -170,6 +186,7 @@ namespace BrickBreaker
             // setup starting ball values
             int ballX = this.Width / 2 - 10;
             int ballY = this.Height - paddle.height - 80;
+
 
             // Setting up powerup values
             powerUpSize = 35;
@@ -324,7 +341,8 @@ namespace BrickBreaker
                 }
             }
             // Check for collision of ball with paddle, (incl. paddle movement)
-            ball.PaddleCollision(paddle, leftArrowDown, rightArrowDown);
+            ball.PaddleCollision(paddle, leftArrowDown, rightArrowDown);         
+            
 
             // Check if ball has collided with any blocks
             foreach (Block b in blocks)
@@ -337,6 +355,7 @@ namespace BrickBreaker
 
 
                     blocks.Remove(b);
+                    
 
                     if (blocks.Count == 0)
                     {
@@ -379,23 +398,47 @@ namespace BrickBreaker
             {
                 foreach (powerUP b in powerUpList)
                 {
-                    e.Graphics.FillEllipse(blockBrush, b.x, b.y, b.size, b.size);
+                    if (b.type == 1)
+                    {
+                        e.Graphics.DrawImage(freezeImage, b.x, b.y, b.size, b.size);
+                    }
+                    else if (b.type == 2)
+                    {
+                        e.Graphics.DrawImage(shieldImage, b.x, b.y, b.size, b.size);
+                    }
+                    else if (b.type == 3)
+                    {
+                        e.Graphics.DrawImage(fireImage, b.x, b.y, b.size, b.size);
+                    }
+                    else if (b.type == 4)
+                    {
+                        e.Graphics.DrawImage(mirrorImage, b.x, b.y, b.size, b.size);
+                    }
+                    else if (b.type == 5)
+                    {
+                        e.Graphics.DrawImage(lengthImage, b.x, b.y, b.size, b.size);
+                    }
+                    else if (b.type == 6)
+                    {
+                        e.Graphics.DrawImage(doublePointsImage, b.x, b.y, b.size, b.size);
+                    }
                 }
             }
 
             // Draws paddle
             //paddleBrush.Color = paddle.colour;
             //e.Graphics.FillRectangle(paddleBrush, paddle.x, paddle.y, paddle.width, paddle.height);
-            e.Graphics.DrawImage(Properties.Resources.sign, paddle.x, paddle.y, paddle.width, paddle.height);
+            e.Graphics.DrawImage(paddleImage, paddle.x, paddle.y, paddle.width, paddle.height);
 
             // Draws blocks
             foreach (Block b in blocks)
             {
-                e.Graphics.FillRectangle(blockBrush, b.x, b.y, b.width, b.height);
+                e.Graphics.FillRectangle(blockBrush, b.x, b.y, b.width, b.height); 
             }
 
             // Draws ball
-            e.Graphics.FillRectangle(ballBrush, ball.x, ball.y, ball.size, ball.size);
+            //e.Graphics.FillRectangle(ballBrush, ball.x, ball.y, ball.size, ball.size);
+            e.Graphics.DrawImage(Properties.Resources.ballSprite, ball.x, ball.y, ball.size, ball.size);
 
             // Draws game screen text
             e.Graphics.DrawString(numericScore.ToString(), drawFont, ballBrush, scoreCountX, scoreCountY, null);

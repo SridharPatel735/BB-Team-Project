@@ -92,9 +92,28 @@ namespace BrickBreaker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Bruh {
+            get {
+                return ResourceManager.GetStream("Bruh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream DoublePoints_PowerUP {
             get {
                 return ResourceManager.GetStream("DoublePoints PowerUP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DoublePoints_PowerUpi {
+            get {
+                object obj = ResourceManager.GetObject("DoublePoints_PowerUpi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -124,6 +143,26 @@ namespace BrickBreaker.Properties {
         internal static System.IO.UnmanagedMemoryStream Fire_PowerUP {
             get {
                 return ResourceManager.GetStream("Fire PowerUP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fire_PowerUpi {
+            get {
+                object obj = ResourceManager.GetObject("Fire_PowerUpi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Freeze_PowerUpi {
+            get {
+                object obj = ResourceManager.GetObject("Freeze_PowerUpi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -245,9 +284,109 @@ namespace BrickBreaker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Length_PowerUpi {
+            get {
+                object obj = ResourceManager.GetObject("Length_PowerUpi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level_1_background {
+            get {
+                object obj = ResourceManager.GetObject("Level_1_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level_2_backgound {
+            get {
+                object obj = ResourceManager.GetObject("Level_2_backgound", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level_3_background {
+            get {
+                object obj = ResourceManager.GetObject("Level_3_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level_4_background {
+            get {
+                object obj = ResourceManager.GetObject("Level_4_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level_5_background {
+            get {
+                object obj = ResourceManager.GetObject("Level_5_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level_6_background {
+            get {
+                object obj = ResourceManager.GetObject("Level_6_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level_7_background {
+            get {
+                object obj = ResourceManager.GetObject("Level_7_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level_8_background {
+            get {
+                object obj = ResourceManager.GetObject("Level_8_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Level_9_background {
             get {
                 object obj = ResourceManager.GetObject("Level_9_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Level_9_background1 {
+            get {
+                object obj = ResourceManager.GetObject("Level_9_background1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -302,6 +441,16 @@ namespace BrickBreaker.Properties {
         internal static System.IO.UnmanagedMemoryStream Mirror_PowerUP {
             get {
                 return ResourceManager.GetStream("Mirror PowerUP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mirror_PowerUpi {
+            get {
+                object obj = ResourceManager.GetObject("Mirror_PowerUpi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -396,6 +545,16 @@ namespace BrickBreaker.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Shield_PowerUpi {
+            get {
+                object obj = ResourceManager.GetObject("Shield_PowerUpi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shieldSprite {
             get {
                 object obj = ResourceManager.GetObject("shieldSprite", resourceCulture);
@@ -409,6 +568,16 @@ namespace BrickBreaker.Properties {
         internal static System.Drawing.Bitmap sign {
             get {
                 object obj = ResourceManager.GetObject("sign", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sign__1_ {
+            get {
+                object obj = ResourceManager.GetObject("sign__1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

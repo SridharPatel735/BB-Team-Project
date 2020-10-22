@@ -222,8 +222,13 @@
     <None Include="Resources\pinkBrick.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\sign.png" />
-    <None Include="Resources\Smashing-Yuri_Santana-1233262689.wav" />
+    <None Include="Resources\douvle.png" />
+    <None Include="Resources\coldcoldocldoclo.png" />
+    <None Include="Resources\big stretch pog.png" />
+    <None Include="Resources\New Piskel %281%29.png" />
+    <None Include="Resources\New Piskel.png" />
+    <None Include="Resources\Fire Anti PowerUp.png" />
+    <None Include="Resources\sign %281%29.png" />
     <None Include="Resources\Level 1 background.png" />
     <None Include="Resources\Level 2 backgound.jpg" />
     <None Include="Resources\Level 3 background.png" />
@@ -233,6 +238,9 @@
     <None Include="Resources\Level 7 background.jpg" />
     <None Include="Resources\Level 8 background.png" />
     <None Include="Resources\Level 9 background.png" />
+    <None Include="Resources\movie_1.wav" />
+    <None Include="Resources\sign.png" />
+    <None Include="Resources\Smashing-Yuri_Santana-1233262689.wav" />
     <None Include="Resources\Slap-SoundMaster13-49669815.wav" />
     <None Include="Resources\Stretching Growing-SoundBible.com-1422617810.wav" />
     <None Include="Resources\Cha_Ching_Register-Muska666-173262285.wav" />
