@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Media;
 using System.Windows.Forms;
 
 namespace BrickBreaker
@@ -23,6 +24,9 @@ namespace BrickBreaker
 
         //rectangle for player ball
         Rectangle playerRec;
+
+        //soundplayer for menu sound
+        SoundPlayer menuSound = new SoundPlayer("Resources/menuSound.mp3");
 
         //images for button sprites and title
         Image playButtonSprite, highscoreButtonSprite, settingsButtonSprite, exitButtonSprite, playerSprite;
@@ -142,6 +146,8 @@ namespace BrickBreaker
                     playerRec = new Rectangle(highscoresRec.X + 20, highscoresRec.Y + 15, 10, 10);
                     downArrowDown = false;
 
+                    menuSound.Play();
+
                     Thread.Sleep(150);
                 }
             }
@@ -169,12 +175,16 @@ namespace BrickBreaker
                 {
                     playerRec = new Rectangle(playRec.X + 20, playRec.Y + 15, 10, 10);
 
+                    menuSound.Play();
+
                     Thread.Sleep(150);
                 }
                 if (downArrowDown == true)
                 {
                     playerRec = new Rectangle(settingsRec.X + 20, settingsRec.Y + 15, 10, 10);
                     downArrowDown = false;
+
+                    menuSound.Play();
 
                     Thread.Sleep(150);
                 }
@@ -203,12 +213,16 @@ namespace BrickBreaker
                 {
                     playerRec = new Rectangle(highscoresRec.X + 20, highscoresRec.Y + 15, 10, 10);
 
+                    menuSound.Play();
+
                     Thread.Sleep(150);
                 }
                 if (downArrowDown == true)
                 {
                     playerRec = new Rectangle(exitRec.X + 20, exitRec.Y + 15, 10, 10);
                     downArrowDown = false;
+
+                    menuSound.Play();
 
                     Thread.Sleep(150);
                 }
@@ -226,6 +240,8 @@ namespace BrickBreaker
                 if (upArrowDown == true)
                 {
                     playerRec = new Rectangle(settingsRec.X + 20, settingsRec.Y + 15, 10, 10);
+
+                    menuSound.Play();
 
                     Thread.Sleep(150);
                 }
