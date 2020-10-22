@@ -26,7 +26,7 @@ namespace BrickBreaker
         Rectangle playerRec;
 
         //soundplayer for menu sound
-        SoundPlayer menuSound = new SoundPlayer("Resources/menuSound.wav");
+        SoundPlayer menuSound = new SoundPlayer(Properties.Resources.menuSound);
 
         //images for button sprites and title
         Image playButtonSprite, highscoreButtonSprite, settingsButtonSprite, exitButtonSprite, playerSprite;
