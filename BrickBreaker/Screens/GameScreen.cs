@@ -33,12 +33,10 @@ namespace BrickBreaker
         // Game values
         int lives;
 
-        //Sounds
-        SoundPlayer LifeLost = new SoundPlayer(Properties.Resources.LifeLost);
-
         // Paddle and Ball objects
         Paddle paddle;
         Ball ball;
+
 
         // list of all blocks for current level
         List<Block> blocks = new List<Block>();
@@ -87,9 +85,6 @@ namespace BrickBreaker
         //int boostSize, boostDraw, boostSpeed;
         List<powerUP> powerUpList = new List<powerUP>();
 
-        //large paddle lot of balls faster shield bottom
-        Random randGen = new Random();
-
         Random powerUpChance = new Random();
         Random powerUpGen = new Random();
 
@@ -112,79 +107,72 @@ namespace BrickBreaker
             pauseBorderSprite = Properties.Resources.highscoreBox;
         }
 
-        public void HighScoreRead()
-        {
-            XmlReader reader = XmlReader.Create("Resources/HighScore.xml", null);
+        //public void HighScoreRead()
+        //{
+        //    XmlReader reader = XmlReader.Create("Resources/HighScore.xml", null);
 
-            reader.ReadToFollowing("HighScore");
+        //    reader.ReadToFollowing("HighScore");
 
-            while (reader.Read())
-            {
-                if (reader.NodeType == XmlNodeType.Text)
-                {
-                    reader.ReadToFollowing("Score");
+        //    while (reader.Read())
+        //    {
+        //        if (reader.NodeType == XmlNodeType.Text)
+        //        {
+        //            reader.ReadToFollowing("Score");
 
-                    reader.ReadToNextSibling("numericScore");
-                    string numericScore = reader.ReadString();
+        //            reader.ReadToNextSibling("numericScore");
+        //            string numericScore = reader.ReadString();
 
-                    reader.ReadToNextSibling("name");
-                    string name = reader.ReadString();
+        //            reader.ReadToNextSibling("name");
+        //            string name = reader.ReadString();
 
-                    //reader.ReadToNextSibling("date");
-                    //string date = reader.ReadString();
+        //            Score s = new Score(numericScore, name);
+        //            highScoreList.Add(s);
+        //        }
+        //    }
+        //    reader.Close();
 
-                    Score s = new Score(numericScore, name);
-                    highScoreList.Add(s);
-                }
+        //    //Checks for 10 highgscores
+        //    if (highScoreList.Count > 10)
+        //    {
+        //        highScoreList.RemoveAt(10);
+        //    }
+        //    if (Convert.ToInt32(highScoreList[highScoreList.Count - 1].numericScore) <= numericScore)
+        //    {
+        //        for (int i = 0; i <= highScoreList.Count; i++)
+        //        {
+        //            if (Convert.ToInt32(highScoreList[i].numericScore) <= numericScore)
+        //            {
+        //                Score s = new Score(Convert.ToString(numericScore), NameInputScreen.playerName);
+        //                highScoreList.Insert(i, s);
+        //                break;
+        //            }
+        //        }
+        //    }
+        //    if (highScoreList.Count > 10)
+        //    {
+        //        highScoreList.RemoveAt(10);
+        //    }
 
-            }
-            reader.Close();
+        //}
 
-            //Temp fix
-            if (highScoreList.Count > 3)
-            {
-                highScoreList.RemoveAt(3);
-            }
-            //Put in 3 more test scores then break point to ensure they're there
+        //public void HighScoreWrite()
+        //{
+        //    XmlWriter writer = XmlWriter.Create("Resources/HighScore.xml", null);
 
-            if (Convert.ToInt32(highScoreList[highScoreList.Count - 1].numericScore) <= numericScore)
-            {
-                for (int i = 0; i <= highScoreList.Count; i++)
-                {
-                    if (Convert.ToInt32(highScoreList[i].numericScore) <= numericScore)
-                    {
-                        Score s = new Score(Convert.ToString(numericScore), "");
-                        highScoreList.Insert(i, s);
-                        break;
-                    }
-                }
-            }
-            if (highScoreList.Count > 3)
-            {
-                highScoreList.RemoveAt(3);
-            }
+        //    writer.WriteStartElement("HighScore");
 
-        }
-
-        public void HighScoreWrite()
-        {
-            XmlWriter writer = XmlWriter.Create("Resources/HighScore.xml", null);
-
-            writer.WriteStartElement("HighScore");
-
-            foreach (Score s in highScoreList)
-            {
-                writer.WriteStartElement("Score");
+        //    foreach (Score s in highScoreList)
+        //    {
+        //        writer.WriteStartElement("Score");
                     
-                writer.WriteElementString("numericScore", s.numericScore);
-                writer.WriteElementString("name", s.name);
-                //writer.WriteElementString("date", s.date);
+        //        writer.WriteElementString("numericScore", s.numericScore);
+        //        writer.WriteElementString("name", s.name);
 
-                writer.WriteEndElement();
-            }
-            writer.WriteEndElement();
-            writer.Close();      
-        }
+        //        writer.WriteEndElement();
+        //    }
+        //    writer.WriteEndElement();
+        //    writer.Close();      
+        //}
   
 
         public void OnStart()
@@ -510,8 +498,8 @@ namespace BrickBreaker
             form.Controls.Add(ps);
             form.Controls.Remove(this);
 
-             HighScoreRead();
-             HighScoreWrite();
+             //HighScoreRead();
+             //HighScoreWrite();
         }
 
         public void GameScreen_Paint(object sender, PaintEventArgs e)
