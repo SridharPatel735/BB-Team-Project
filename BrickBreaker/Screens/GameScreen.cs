@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
 using System.Xml;
+using System.IO;
 
 namespace BrickBreaker
 {
@@ -32,6 +33,9 @@ namespace BrickBreaker
         // Game values
         int lives;
 
+        //Sounds
+        SoundPlayer LifeLost = new SoundPlayer(Properties.Resources.LifeLost);
+
         // Paddle and Ball objects
         Paddle paddle;
         Ball ball;
@@ -40,10 +44,17 @@ namespace BrickBreaker
         List<Block> blocks = new List<Block>();
 
         // Brushes
-        SolidBrush paddleBrush = new SolidBrush(Color.White);
         SolidBrush ballBrush = new SolidBrush(Color.White);
         SolidBrush blockBrush = new SolidBrush(Color.Red);
         SolidBrush backBrush = new SolidBrush(Color.Black);
+
+        //Image
+        Image freezeImage = Properties.Resources.Freeze_PowerUpi;
+        Image shieldImage = Properties.Resources.Shield_PowerUpi;
+        Image doublePointsImage = Properties.Resources.DoublePoints_PowerUpi;
+        Image lengthImage = Properties.Resources.Length_PowerUpi;
+        Image fireImage = Properties.Resources.Fire_PowerUpi;
+        Image mirrorImage = Properties.Resources.Mirror_PowerUpi;
 
         // Images
         Image paddleImage = Properties.Resources.sign__1_;
@@ -184,7 +195,6 @@ namespace BrickBreaker
             exitRec = new Rectangle(menuRec.Width - 150 / 2, menuRec.Height + 50, 150, 50);
             playerRec = new Rectangle(playRec.X + 20, playRec.Y + 15, 10, 10);
 
-            //set player location
             //set life counter
             lives = 3;
 
@@ -392,6 +402,9 @@ namespace BrickBreaker
                 }
                 else
                 {
+                    var dingPlayer = new System.Windows.Media.MediaPlayer();
+                    dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/lifelost.wav"));
+                    dingPlayer.Play();
                     lives--;
 
                     // Clearing powerups on screen
@@ -504,16 +517,58 @@ namespace BrickBreaker
         public void GameScreen_Paint(object sender, PaintEventArgs e)
         {
             // Draws powerups
+            // Draws powerups
             if (powerUpList.Count > 0)
             {
                 foreach (powerUP b in powerUpList)
                 {
-                    e.Graphics.FillEllipse(blockBrush, b.x, b.y, b.size, b.size);
+                    if (b.type == 1)
+                    {
+                        e.Graphics.DrawImage(freezeImage, b.x, b.y, b.size, b.size);
+                        var dingPlayer = new System.Windows.Media.MediaPlayer();
+                        dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/Ice_PowerUP.wav"));
+                        dingPlayer.Play();
+                    }
+                    else if (b.type == 2)
+                    {
+                        e.Graphics.DrawImage(shieldImage, b.x, b.y, b.size, b.size);
+                        var dingPlayer = new System.Windows.Media.MediaPlayer();
+                        dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/Shield_PowerUP.wav"));
+                        dingPlayer.Play();
+                    }
+                    else if (b.type == 3)
+                    {
+                        e.Graphics.DrawImage(fireImage, b.x, b.y, b.size, b.size);
+                        var dingPlayer = new System.Windows.Media.MediaPlayer();
+                        dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/Fire_PowerUP.wav"));
+                        dingPlayer.Play();
+                    }
+                    else if (b.type == 4)
+                    {
+                        e.Graphics.DrawImage(mirrorImage, b.x, b.y, b.size, b.size);
+                        var dingPlayer = new System.Windows.Media.MediaPlayer();
+                        dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/Mirror_PowerUP.wav"));
+                        dingPlayer.Play();
+                    }
+                    else if (b.type == 5)
+                    {
+                        e.Graphics.DrawImage(lengthImage, b.x, b.y, b.size, b.size);
+                        var dingPlayer = new System.Windows.Media.MediaPlayer();
+                        dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/Length_PowerUP.wav"));
+                        dingPlayer.Play();
+                    }
+                    else if (b.type == 6)
+                    {
+                        e.Graphics.DrawImage(doublePointsImage, b.x, b.y, b.size, b.size);
+                        var dingPlayer = new System.Windows.Media.MediaPlayer();
+                        dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/DoublePoints_PowerUP.wav"));
+                        dingPlayer.Play();
+                    }
                 }
             }
 
-            // Draws paddle
-            e.Graphics.DrawImage(paddleImage, paddle.x, paddle.y, paddle.width, paddle.height);
+                // Draws paddle
+                e.Graphics.DrawImage(paddleImage, paddle.x, paddle.y, paddle.width, paddle.height);
 
             // Draws blocks
             foreach (Block b in blocks)

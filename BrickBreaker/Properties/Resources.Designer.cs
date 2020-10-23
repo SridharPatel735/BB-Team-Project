@@ -574,21 +574,21 @@ namespace BrickBreaker.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Sheild_PowerUpi {
-            get {
-                object obj = ResourceManager.GetObject("Sheild_PowerUpi", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream Shield_PowerUP {
             get {
                 return ResourceManager.GetStream("Shield PowerUP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Shield_PowerUpi {
+            get {
+                object obj = ResourceManager.GetObject("Shield_PowerUpi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

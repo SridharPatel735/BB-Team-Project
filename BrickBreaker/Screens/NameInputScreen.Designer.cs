@@ -118,7 +118,7 @@
             // 
             // pictureBox13
             // 
-            this.pictureBox13.BackgroundImage = global::BrickBreaker.Properties.Resources.Sheild_PowerUpi;
+            this.pictureBox13.BackgroundImage = global::BrickBreaker.Properties.Resources.Shield_PowerUpi;
             this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox13.Location = new System.Drawing.Point(852, 359);
             this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);

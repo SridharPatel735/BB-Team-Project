@@ -50,6 +50,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -61,6 +62,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ball.cs" />
@@ -231,8 +233,12 @@
     <None Include="Resources\pinkBrick.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\LifeLost.wav" />
-    <None Include="Resources\bruh.wav" />
+    <None Include="Resources\LifeLost.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\bruh.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\sridhar.png" />
     <None Include="Resources\Shield PowerUp.png" />
     <None Include="Resources\big stretch pog.png" />
@@ -275,7 +281,9 @@
     <None Include="Resources\level12.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\Smashing-Yuri_Santana-1233262689.wav" />
+    <None Include="Resources\Smashing-Yuri_Santana-1233262689.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\Level 1 background.png" />
     <None Include="Resources\Level 2 backgound.jpg" />
     <None Include="Resources\Level 3 background.png" />
@@ -285,13 +293,27 @@
     <None Include="Resources\Level 7 background.jpg" />
     <None Include="Resources\Level 8 background.png" />
     <None Include="Resources\Level 9 background.png" />
-    <None Include="Resources\Slap-SoundMaster13-49669815.wav" />
-    <None Include="Resources\Stretching Growing-SoundBible.com-1422617810.wav" />
-    <None Include="Resources\Cha_Ching_Register-Muska666-173262285.wav" />
-    <None Include="Resources\Mirror Shattering-SoundBible.com-1752328245.wav" />
-    <None Include="Resources\Avalanche-SoundBible.com-1774366762.wav" />
-    <None Include="Resources\End_Fx-Mike_Devils-724852498.wav" />
-    <None Include="Resources\European_Dragon_Roaring_and_breathe_fire-daniel-simon.wav" />
+    <None Include="Resources\Slap-SoundMaster13-49669815.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Stretching Growing-SoundBible.com-1422617810.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Cha_Ching_Register-Muska666-173262285.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Mirror Shattering-SoundBible.com-1752328245.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Avalanche-SoundBible.com-1774366762.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\End_Fx-Mike_Devils-724852498.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\European_Dragon_Roaring_and_breathe_fire-daniel-simon.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\instructionsBox.png" />
     <None Include="Resources\exitSettingsButtonSprite.png" />
     <None Include="Resources\muteButtonSprite.png" />

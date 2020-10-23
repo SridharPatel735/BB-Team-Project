@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Media;
+using System.IO;
 
 namespace BrickBreaker
 
@@ -11,12 +12,11 @@ namespace BrickBreaker
         public int x, y, xSpeed, ySpeed, size, unclaimedScore = 0; 
         public Color colour;
         public bool movingRight;
+
+        //sound player
+        //System.Windows.Media.MediaPlayer dingPlayer = new System.Windows.Media.MediaPlayer();
+
         //Sound effects for ball
-        SoundPlayer BlockCollisionSound = new SoundPlayer(Properties.Resources.BallHitBrick);
-        SoundPlayer PaddleCollisionSound = new SoundPlayer(Properties.Resources.PaddleHitBall);
-        SoundPlayer upBruhSound = new SoundPlayer(Properties.Resources.Bruh);
-        SoundPlayer leftBruhSound = new SoundPlayer(Properties.Resources.Bruh);
-        SoundPlayer rightBruhSound = new SoundPlayer(Properties.Resources.Bruh);
         public static Random rand = new Random();
 
         public Ball(int _x, int _y, int _xSpeed, int _ySpeed, int _ballSize)
@@ -46,26 +46,35 @@ namespace BrickBreaker
             // Ball hitbox generation
             Rectangle ballRec = new Rectangle(x, y, size, size);
 
+
             // Collision mechanics for blocks
             if (ballRec.IntersectsWith(topRec))
             {
                 Up();
-                BlockCollisionSound.Play();
+                System.Windows.Media.MediaPlayer dingPlayer = new System.Windows.Media.MediaPlayer();
+                dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/Bruh.wav"));
+                dingPlayer.Play();
             }
             else if (ballRec.IntersectsWith(bottomRec))
             {
                 Down();
-                BlockCollisionSound.Play();
+                System.Windows.Media.MediaPlayer dingPlayer = new System.Windows.Media.MediaPlayer();
+                dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/Bruh.wav"));
+                dingPlayer.Play();
             }
             if (ballRec.IntersectsWith(rightRec))
             {
                 Right();
-                BlockCollisionSound.Play();
+                System.Windows.Media.MediaPlayer dingPlayer = new System.Windows.Media.MediaPlayer();
+                dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/Bruh.wav"));
+                dingPlayer.Play();
             }
             else if (ballRec.IntersectsWith(leftRec))
             {
                 Left();
-                BlockCollisionSound.Play();
+                System.Windows.Media.MediaPlayer dingPlayer = new System.Windows.Media.MediaPlayer();
+                dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/Bruh.wav"));
+                dingPlayer.Play();
             }
 
             // return statement (don't touch)
@@ -91,11 +100,9 @@ namespace BrickBreaker
 
 
                 Up();
-                upBruhSound.Stop();
-                leftBruhSound.Stop();
-                rightBruhSound.Stop();
-                BlockCollisionSound.Stop();
-                PaddleCollisionSound.Stop();
+                System.Windows.Media.MediaPlayer dingPlayer = new System.Windows.Media.MediaPlayer();
+                dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/PaddleHitBall.wav"));
+                dingPlayer.Play();
                 // Checking if ball is hitting the paddle side
                 if (ballRec.IntersectsWith(rightRec) || ballRec.IntersectsWith(leftRec))
                 {
@@ -158,25 +165,25 @@ namespace BrickBreaker
             if (x <= 0)
             {
                 Right();
-                upBruhSound.Stop();
-                BlockCollisionSound.Stop();
-                rightBruhSound.Play();
+                System.Windows.Media.MediaPlayer dingPlayer = new System.Windows.Media.MediaPlayer();
+                dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/Bruh.wav"));
+                dingPlayer.Play();
             }
             // Collision with left wall
             if (x >= (UC.Width - size))
             {
                 Left();
-                upBruhSound.Stop();
-                BlockCollisionSound.Stop();
-                leftBruhSound.Play();
+                System.Windows.Media.MediaPlayer dingPlayer = new System.Windows.Media.MediaPlayer();
+                dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/Bruh.wav"));
+                dingPlayer.Play();
             }
             // Collision with top wall
             if (y <= 2)
             {
                 Down();
-                BlockCollisionSound.Stop();
-                leftBruhSound.Stop();
-                upBruhSound.Play();
+                System.Windows.Media.MediaPlayer dingPlayer = new System.Windows.Media.MediaPlayer();
+                dingPlayer.Open(new Uri(Application.StartupPath + "/Resources/Bruh.wav"));
+                dingPlayer.Play();
             }
         }
 
@@ -250,37 +257,37 @@ namespace BrickBreaker
 
             if (collisionPoint >= (pWidth * .80)) // Top 20%
             {
-                xSpeed = 6;
+                xSpeed = 7;
                 setY();
             }
             else if (collisionPoint >= (pWidth * .70))
             {
-                xSpeed = 5;
+                xSpeed = 6;
                 setY();
             }
             else if (collisionPoint >= (pWidth * .60))
             {
-                xSpeed = 4;
+                xSpeed = 5;
                 setY();
             }
             else if (collisionPoint >= (pWidth * .40)) // Middle Point
             {
-                xSpeed = 3;
+                xSpeed = 4;
                 setY();
             }
             else if (collisionPoint >= (pWidth * .30))
             {
-                xSpeed = 4;
+                xSpeed = 5;
                 setY();
             }
             else if (collisionPoint >= (pWidth * .20))
             {
-                xSpeed = 5;
+                xSpeed = 6;
                 setY();
             }
             else // Bottom 20%
             {
-                xSpeed = 6;
+                xSpeed = 7;
                 setY();
             }
         }
@@ -303,7 +310,7 @@ namespace BrickBreaker
         }
         private void setY()
         {
-            ySpeed = (12 - xSpeed) * -1;
+            ySpeed = (14 - xSpeed) * -1;
 
         }
         public void stop()
