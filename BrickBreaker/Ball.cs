@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Media;
 
 namespace BrickBreaker
 
@@ -10,7 +11,12 @@ namespace BrickBreaker
         public int x, y, xSpeed, ySpeed, size, unclaimedScore = 0; 
         public Color colour;
         public bool movingRight;
-
+        //Sound effects for ball
+        SoundPlayer BlockCollisionSound = new SoundPlayer(Properties.Resources.BallHitBrick);
+        SoundPlayer PaddleCollisionSound = new SoundPlayer(Properties.Resources.PaddleHitBall);
+        SoundPlayer upBruhSound = new SoundPlayer(Properties.Resources.Bruh);
+        SoundPlayer leftBruhSound = new SoundPlayer(Properties.Resources.Bruh);
+        SoundPlayer rightBruhSound = new SoundPlayer(Properties.Resources.Bruh);
         public static Random rand = new Random();
 
         public Ball(int _x, int _y, int _xSpeed, int _ySpeed, int _ballSize)
@@ -44,18 +50,22 @@ namespace BrickBreaker
             if (ballRec.IntersectsWith(topRec))
             {
                 Up();
+                BlockCollisionSound.Play();
             }
             else if (ballRec.IntersectsWith(bottomRec))
             {
                 Down();
+                BlockCollisionSound.Play();
             }
             if (ballRec.IntersectsWith(rightRec))
             {
                 Right();
+                BlockCollisionSound.Play();
             }
             else if (ballRec.IntersectsWith(leftRec))
             {
                 Left();
+                BlockCollisionSound.Play();
             }
 
             // return statement (don't touch)
@@ -81,6 +91,11 @@ namespace BrickBreaker
 
 
                 Up();
+                upBruhSound.Stop();
+                leftBruhSound.Stop();
+                rightBruhSound.Stop();
+                BlockCollisionSound.Stop();
+                PaddleCollisionSound.Stop();
                 // Checking if ball is hitting the paddle side
                 if (ballRec.IntersectsWith(rightRec) || ballRec.IntersectsWith(leftRec))
                 {
@@ -143,16 +158,25 @@ namespace BrickBreaker
             if (x <= 0)
             {
                 Right();
+                upBruhSound.Stop();
+                BlockCollisionSound.Stop();
+                rightBruhSound.Play();
             }
             // Collision with left wall
             if (x >= (UC.Width - size))
             {
                 Left();
+                upBruhSound.Stop();
+                BlockCollisionSound.Stop();
+                leftBruhSound.Play();
             }
             // Collision with top wall
             if (y <= 2)
             {
                 Down();
+                BlockCollisionSound.Stop();
+                leftBruhSound.Stop();
+                upBruhSound.Play();
             }
         }
 

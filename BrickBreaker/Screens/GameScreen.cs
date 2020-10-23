@@ -46,7 +46,7 @@ namespace BrickBreaker
         SolidBrush backBrush = new SolidBrush(Color.Black);
 
         // Images
-        Image paddleImage = Properties.Resources.sign;
+        Image paddleImage = Properties.Resources.sign__1_;
         Image ballImage = Properties.Resources.ballSprite;
 
         // Fonts

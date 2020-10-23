@@ -118,7 +118,7 @@
             // 
             // pictureBox13
             // 
-            this.pictureBox13.BackgroundImage = global::BrickBreaker.Properties.Resources.sridhar;
+            this.pictureBox13.BackgroundImage = global::BrickBreaker.Properties.Resources.Sheild_PowerUpi;
             this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox13.Location = new System.Drawing.Point(852, 359);
             this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
@@ -129,7 +129,7 @@
             // 
             // pictureBox15
             // 
-            this.pictureBox15.BackgroundImage = global::BrickBreaker.Properties.Resources.big_stretch_pog;
+            this.pictureBox15.BackgroundImage = global::BrickBreaker.Properties.Resources.Length_PowerUpi;
             this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox15.Location = new System.Drawing.Point(852, 473);
             this.pictureBox15.Margin = new System.Windows.Forms.Padding(4);
@@ -140,7 +140,7 @@
             // 
             // pictureBox14
             // 
-            this.pictureBox14.BackgroundImage = global::BrickBreaker.Properties.Resources.Fire_Anti_PowerUp;
+            this.pictureBox14.BackgroundImage = global::BrickBreaker.Properties.Resources.Fire_PowerUpi;
             this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox14.Location = new System.Drawing.Point(852, 414);
             this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
@@ -151,7 +151,7 @@
             // 
             // pictureBox12
             // 
-            this.pictureBox12.BackgroundImage = global::BrickBreaker.Properties.Resources.Double_Points_PowerUp;
+            this.pictureBox12.BackgroundImage = global::BrickBreaker.Properties.Resources.DoublePoints_PowerUpi;
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox12.Location = new System.Drawing.Point(852, 298);
             this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
@@ -162,7 +162,7 @@
             // 
             // pictureBox11
             // 
-            this.pictureBox11.BackgroundImage = global::BrickBreaker.Properties.Resources.douvle;
+            this.pictureBox11.BackgroundImage = global::BrickBreaker.Properties.Resources.Mirror_PowerUpi;
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox11.Location = new System.Drawing.Point(852, 240);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
@@ -173,7 +173,7 @@
             // 
             // pictureBox10
             // 
-            this.pictureBox10.BackgroundImage = global::BrickBreaker.Properties.Resources.coldcoldocldoclo;
+            this.pictureBox10.BackgroundImage = global::BrickBreaker.Properties.Resources.Freeze_PowerUpi;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox10.Location = new System.Drawing.Point(852, 184);
             this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
