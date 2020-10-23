@@ -21,7 +21,8 @@ namespace BrickBreaker
         Boolean upArrowDown, downArrowDown, spaceDown;
 
         //booleans for fullscreen and mute toggles
-        Boolean fullscreen, mute;
+        Boolean fullscreen = true; 
+        Boolean mute = false;
 
         //rectangles for menu buttons
         Rectangle muteRec, fullscreenRec, exitRec;
@@ -31,6 +32,9 @@ namespace BrickBreaker
 
         //soundplayer for menu sound
         SoundPlayer menuSound = new SoundPlayer(Properties.Resources.menuSound);
+
+        //used for volume toggle
+        WindowsMediaPlayer wmp = new WindowsMediaPlayer();
 
         //images for button sprites and title
         Image muteButtonSprite, fullscreenButtonSprite, exitSettingsButtonSprite, playerSprite;
@@ -129,9 +133,6 @@ namespace BrickBreaker
             {
                 if (spaceDown == true)
                 {
-                    //used for volume toggle
-                    WindowsMediaPlayer wmp = new WindowsMediaPlayer();
-
                     //toggle program mute
                     if (mute == true)
                     { 
@@ -140,12 +141,18 @@ namespace BrickBreaker
                         menuSound.Play();
 
                         mute = false;
+                        spaceDown = false;
+
+                        return;
                     }
                     if (mute == false)
                     {
                         wmp.settings.volume = 0;
 
                         mute = true;
+                        spaceDown = false;
+
+                        return;
                     }
                 }
                 if (downArrowDown == true)
@@ -173,6 +180,8 @@ namespace BrickBreaker
                         f.WindowState = FormWindowState.Normal;
                         this.Location = new Point((f.Width - this.Width) / 2, (f.Height - this.Height) / 2); //center the screen
                         fullscreen = false;
+
+                        return;
                     }
                     else
                     {
@@ -180,6 +189,8 @@ namespace BrickBreaker
                         f.WindowState = FormWindowState.Maximized;
                         this.Location = new Point((f.Width - this.Width) / 2, (f.Height - this.Height) / 2); //center the screen
                         fullscreen = true;
+
+                        return;
                     }
 
                     Thread.Sleep(150);
