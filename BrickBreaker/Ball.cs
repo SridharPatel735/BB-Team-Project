@@ -17,7 +17,9 @@ namespace BrickBreaker
         //Sound effects for ball
         SoundPlayer BlockCollisionSound = new SoundPlayer(Properties.Resources.BallHitBrick);
         SoundPlayer PaddleCollisionSound = new SoundPlayer(Properties.Resources.PaddleHitBall);
-        SoundPlayer BruhSound = new SoundPlayer(Properties.Resources.Bruh);
+        SoundPlayer upBruhSound = new SoundPlayer(Properties.Resources.Bruh);
+        SoundPlayer leftBruhSound = new SoundPlayer(Properties.Resources.Bruh);
+        SoundPlayer rightBruhSound = new SoundPlayer(Properties.Resources.Bruh);
 
         public Ball(int _x, int _y, int _xSpeed, int _ySpeed, int _ballSize)
         {
@@ -85,6 +87,10 @@ namespace BrickBreaker
             {
                 // Always set y movement to up when colliding with paddle.
                 Up();
+                upBruhSound.Stop();
+                leftBruhSound.Stop();
+                rightBruhSound.Stop();
+                BlockCollisionSound.Stop();
                 PaddleCollisionSound.Play();
                 // Checking if ball is hitting the paddle side
                 if (ballRec.IntersectsWith(rightRec) || ballRec.IntersectsWith(leftRec))
@@ -149,19 +155,25 @@ namespace BrickBreaker
             if (x <= 0)
             {
                 Right();
-                BruhSound.Play();
+                upBruhSound.Stop();
+                BlockCollisionSound.Stop();
+                rightBruhSound.Play();
             }
             // Collision with left wall
             if (x >= (UC.Width - size))
             {
                 Left();
-                BruhSound.Play();
+                upBruhSound.Stop();
+                BlockCollisionSound.Stop();
+                leftBruhSound.Play();
             }
             // Collision with top wall
             if (y <= 2)
             {
                 Down();
-                BruhSound.Play();
+                leftBruhSound.Stop();
+                rightBruhSound.Stop();
+                upBruhSound.Play();
             }
         }
 

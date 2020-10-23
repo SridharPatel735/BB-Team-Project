@@ -44,7 +44,7 @@ namespace BrickBreaker
 
             if (type == 1) // For period of time, paddle speed is reduced
             {
-                frozen = true;
+                frozen = true;  
             }
             else if (type == 2) // Next hit to shield, run code to bounce instead of kill
             {

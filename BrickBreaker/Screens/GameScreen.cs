@@ -71,6 +71,7 @@ namespace BrickBreaker
         SoundPlayer LengthUP = new SoundPlayer(Properties.Resources.Length_PowerUP);
         SoundPlayer FreezeUP = new SoundPlayer(Properties.Resources.Ice_PowerUP);
         SoundPlayer MirrorUP = new SoundPlayer(Properties.Resources.Mirror_PowerUP);
+        SoundPlayer LifeLost = new SoundPlayer(Properties.Resources.LifeLost);
 
         //int boostSize, boostDraw, boostSpeed;
         List<powerUP> powerUpList = new List<powerUP>();
@@ -319,6 +320,8 @@ namespace BrickBreaker
             if (ball.BottomCollision(this))
             {
                 lives--;
+                LifeLost.Play();
+
 
                 // Clearing powerups on screen
                 if (powerUpList.Count > 0)
